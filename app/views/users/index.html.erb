@@ -1,0 +1,13 @@
+<% @users.each do |user|  %>
+    <ul>
+        <lh><%=user.name%></lh>
+        <li><%=user.email%></li>
+        <li><%= link_to 'Show', user %></li>
+        <li><%= link_to 'Edit', edit_user_path(user) %></li>
+        <li><%= link_to 'Destroy', user, method: :delete,
+                                            data: {confirm: 'Are you sure?'} %></li>
+
+
+    </ul>
+
+<% end %>
